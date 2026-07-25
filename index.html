@@ -94,11 +94,11 @@
 
                 <div class="hero-buttons">
 
-                    <a href="#" class="btn">
+                    <button type="button" class="btn" id="openConsultationBtn">
 
                         Book Consultation
 
-                    </a>
+                    </button>
 
                     <a href="#" class="btn secondary">
 
@@ -463,6 +463,42 @@
 
     </section>
 
+    <div class="modal" id="consultModal" aria-hidden="true">
+
+        <div class="modal-content">
+
+            <button type="button" class="modal-close" id="closeConsultationModal" aria-label="Close consultation form">&times;</button>
+
+            <h3>Book a Consultation</h3>
+
+            <p>Share your details and we will contact you soon.</p>
+
+            <form id="consultationForm" class="modal-form">
+
+                <label for="consultName">Name</label>
+                <input type="text" id="consultName" name="name" placeholder="Your full name" required>
+
+                <label for="consultEmail">Email</label>
+                <input type="email" id="consultEmail" name="email" placeholder="you@example.com" required>
+
+                <label for="consultMobile">Mobile Number</label>
+                <input type="tel" id="consultMobile" name="mobile" placeholder="+91 98765 43210" required>
+
+                <label for="consultAddress">Address</label>
+                <textarea id="consultAddress" name="address" placeholder="Your address" required></textarea>
+
+                <div class="modal-actions">
+                    <button type="button" class="btn secondary" id="cancelConsultationBtn">Cancel</button>
+                    <button type="submit" class="btn" id="submitConsultationBtn">Submit Request</button>
+                </div>
+
+                <p class="form-status" id="consultationStatus" role="status" aria-live="polite"></p>
+
+            </form>
+
+        </div>
+
+    </div>
 
 
     <!-- ================= FOOTER ================= -->
@@ -547,6 +583,7 @@
 
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="js/script.js"></script>
 
 </body>
