@@ -23,7 +23,11 @@ consultModal.addEventListener('click', (event) => {
     }
 });
 
-emailjs.init('9XYATwPvbqzvrCn8');
+if (!window.emailjs) {
+    console.error('EmailJS library did not load.');
+} else {
+    emailjs.init('9XYATwPvbqzvrCn8');
+}
 
 consultationForm.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -43,6 +47,11 @@ consultationForm.addEventListener('submit', (event) => {
         to_email: 'magadh.hind@gmail.com'
     };
 
+    if (!window.emailjs) {
+        alert('EmailJS library not loaded. Please check your internet connection and script tag.');
+        return;
+    }
+
     emailjs.send('service_8ciyex8', 'template_pm9a967', templateParams)
         .then(() => {
             alert('Thank you! Your consultation request has been sent successfully.');
@@ -50,6 +59,6 @@ consultationForm.addEventListener('submit', (event) => {
             closeModal();
         }, (error) => {
             console.error('EmailJS error:', error);
-            alert('Unable to send your request right now. Please try again later or email directly.');
+            alert(`Unable to send your request right now. Error: ${error.text || error.status || 'unknown'}`);
         });
 });
