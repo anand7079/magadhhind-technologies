@@ -83,7 +83,8 @@ consultationForm.addEventListener('submit', async (event) => {
         showStatus('Thank you! Your consultation request has been sent successfully.', 'success');
     } catch (error) {
         console.error('EmailJS error:', error);
-        showStatus('We could not send your request right now.', 'error', mailtoUrl);
+        const reason = error?.text || error?.message || (error?.status ? `Request status: ${error.status}` : 'Unknown error');
+        showStatus(`We could not send your request right now: ${reason}`, 'error', mailtoUrl);
     } finally {
         submitConsultationBtn.disabled = false;
         submitConsultationBtn.textContent = 'Submit Request';
