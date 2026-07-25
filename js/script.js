@@ -23,9 +23,33 @@ consultModal.addEventListener('click', (event) => {
     }
 });
 
+emailjs.init('9XYATwPvbqzvrCn8');
+
 consultationForm.addEventListener('submit', (event) => {
     event.preventDefault();
-    alert('Thank you! Your consultation request has been submitted. We will contact you soon.');
-    consultationForm.reset();
-    closeModal();
+
+    const name = document.getElementById('consultName').value.trim();
+    const email = document.getElementById('consultEmail').value.trim();
+    const mobile = document.getElementById('consultMobile').value.trim();
+    const address = document.getElementById('consultAddress').value.trim();
+
+    const templateParams = {
+        title: 'Consultation Request',
+        name,
+        email,
+        mobile,
+        address,
+        message: `Consultation request details:\nMobile: ${mobile}\nAddress: ${address}`,
+        to_email: 'magadh.hind@gmail.com'
+    };
+
+    emailjs.send('service_8ciyex8', 'template_pm9a967', templateParams)
+        .then(() => {
+            alert('Thank you! Your consultation request has been sent successfully.');
+            consultationForm.reset();
+            closeModal();
+        }, (error) => {
+            console.error('EmailJS error:', error);
+            alert('Unable to send your request right now. Please try again later or email directly.');
+        });
 });
