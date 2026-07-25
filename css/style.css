@@ -1144,3 +1144,49 @@ section h2{
 }
 
 }
+
+.form-status{
+
+    min-height:24px;
+
+    margin:0;
+
+    font-size:14px;
+
+}
+
+.form-status.pending{
+
+    color:#555;
+
+}
+
+.form-status.success{
+
+    color:#17713a;
+
+}
+
+.form-status.error{
+
+    color:#b42318;
+
+}
+
+.form-status a{
+
+    color:inherit;
+
+    font-weight:600;
+
+    text-decoration:underline;
+
+}
+
+.modal-actions .btn:disabled{
+
+    cursor:wait;
+
+    opacity:.7;
+
+}

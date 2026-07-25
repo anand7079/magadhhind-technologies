@@ -489,8 +489,10 @@
 
                 <div class="modal-actions">
                     <button type="button" class="btn secondary" id="cancelConsultationBtn">Cancel</button>
-                    <button type="submit" class="btn">Submit Request</button>
+                    <button type="submit" class="btn" id="submitConsultationBtn">Submit Request</button>
                 </div>
+
+                <p class="form-status" id="consultationStatus" role="status" aria-live="polite"></p>
 
             </form>
 
@@ -581,7 +583,7 @@
 
     </footer>
 
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="js/script.js"></script>
 
 </body>
