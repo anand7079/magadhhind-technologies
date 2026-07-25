@@ -31,7 +31,7 @@ consultModal.addEventListener('click', (event) => {
 if (!window.emailjs) {
     console.error('EmailJS library did not load.');
 } else {
-    emailjs.init({ publicKey: '9XYATwPvbqzvrCn8' });
+    emailjs.init({ publicKey: '-9XYATwPvbqzvrCn8' });
 }
 
 const showStatus = (message, type, fallbackUrl = '') => {
