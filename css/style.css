@@ -487,6 +487,26 @@ nav a:hover::after{
 
 }
 
+.contact-options-actions .btn{
+
+    background:#f4f4f4;
+
+    color:#333;
+
+    border:1px solid #ccc;
+
+}
+
+.contact-options-actions .btn:hover,
+.contact-options-actions .btn:focus,
+.contact-options-actions .btn:active{
+
+    background:var(--accent);
+
+    color:white;
+
+}
+
 /* =====================================================
    COMMON SECTION
 ===================================================== */
