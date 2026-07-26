@@ -327,7 +327,8 @@ nav a:hover::after{
 
 }
 
-.modal.active{
+.modal.active,
+.modal:target{
 
     display:flex;
 
