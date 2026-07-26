@@ -507,6 +507,16 @@ nav a:hover::after{
 
 }
 
+.contact-options-actions .btn.secondary:hover,
+.contact-options-actions .btn.secondary:focus,
+.contact-options-actions .btn.secondary:active{
+
+    background:var(--accent);
+
+    color:white;
+
+}
+
 /* =====================================================
    COMMON SECTION
 ===================================================== */
