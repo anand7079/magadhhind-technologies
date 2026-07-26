@@ -480,6 +480,12 @@ nav a:hover::after{
 
 }
 
+.contact-options-actions{
+
+    justify-content:center;
+
+}
+
 /* =====================================================
    COMMON SECTION
 ===================================================== */

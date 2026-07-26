@@ -453,15 +453,34 @@
 
             </p>
 
-            <a href="https://wa.me/917061798002?text=Hi%20MagadhHind%20Technologies%20Team%2C%20I%20want%20to%20connect%20for%20a%20software%20consultancy%20requirement" class="btn" target="_blank" rel="noopener noreferrer">
+            <button type="button" class="btn" id="openContactOptionsBtn" aria-haspopup="dialog" aria-controls="contactOptionsModal">
 
                 Contact Us
 
-            </a>
+            </button>
 
         </div>
 
     </section>
+
+    <div class="modal" id="contactOptionsModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="contactOptionsTitle">
+
+        <div class="modal-content contact-options-content">
+
+            <button type="button" class="modal-close" id="closeContactOptionsModal" aria-label="Close contact options">&times;</button>
+
+            <h3 id="contactOptionsTitle">Contact Us</h3>
+
+            <p>Choose how you would like to connect with our team.</p>
+
+            <div class="modal-actions contact-options-actions">
+                <a href="mailto:magadh.hind@gmail.com?subject=Software%20Consultancy%20Requirement&body=Hi%20MagadhHind%20Technologies%20Team%2C%20I%20want%20to%20connect%20for%20a%20software%20consultancy%20requirement" class="btn secondary">Email</a>
+                <a href="https://wa.me/917061798002?text=Hi%20MagadhHind%20Technologies%20Team%2C%20I%20want%20to%20connect%20for%20a%20software%20consultancy%20requirement" class="btn" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            </div>
+
+        </div>
+
+    </div>
 
     <div class="modal" id="consultModal" aria-hidden="true">
 
