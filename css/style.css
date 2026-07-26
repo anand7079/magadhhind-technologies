@@ -20,7 +20,7 @@ html{
 body{
     font-family:'Poppins',sans-serif;
     color:#333;
-    background:#f7faf7;
+    background:#fff8f0;
     line-height:1.7;
 }
 
@@ -49,15 +49,15 @@ ul{
 
 :root{
 
-    --primary:#2E7D32;
-    --secondary:#66BB6A;
-    --accent:#F9A825;
+    --primary:#a8521a;
+    --secondary:#f5b97a;
+    --accent:#d96c1a;
 
     --dark:#1B1B1B;
 
     --white:#ffffff;
 
-    --light:#F4F8F4;
+    --light:#fff2e2;
 
     --shadow:0 10px 30px rgba(0,0,0,.10);
 
@@ -173,7 +173,7 @@ nav a:hover::after{
 
     background:
 
-    linear-gradient(rgba(25,85,35,.70),rgba(25,85,35,.70)),
+    linear-gradient(rgba(217,108,26,.72),rgba(217,108,26,.72)),
 
     url("photos/test.jpg");
 
@@ -640,11 +640,11 @@ section h2{
 
     background:linear-gradient(
         135deg,
-        var(--primary),
-        #1b5e20
+        #f4c38e,
+        #eaa55a
     );
 
-    color:white;
+    color:var(--dark);
 
 }
 
@@ -668,7 +668,7 @@ section h2{
 
 .stats-grid h2{
 
-    color:white;
+    color:var(--dark);
 
     font-size:56px;
 
@@ -784,7 +784,7 @@ section h2{
 
     height:100%;
 
-    background:rgba(46,125,50,.08);
+    background:rgba(217,108,26,.12);
 
     opacity:0;
 
@@ -894,11 +894,11 @@ section h2{
 
     background:linear-gradient(
         135deg,
-        var(--primary),
-        #1b5e20
+        #f4c38e,
+        #eaa55a
     );
 
-    color:white;
+    color:var(--dark);
 
     text-align:center;
 
@@ -906,7 +906,7 @@ section h2{
 
 .cta h2{
 
-    color:white;
+    color:var(--dark);
 
     margin-bottom:20px;
 
