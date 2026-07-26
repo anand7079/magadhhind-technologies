@@ -5,9 +5,11 @@ const consultModal = document.getElementById('consultModal');
 const consultationForm = document.getElementById('consultationForm');
 const consultationStatus = document.getElementById('consultationStatus');
 const submitConsultationBtn = document.getElementById('submitConsultationBtn');
+
 const openContactOptionsBtn = document.getElementById('openContactOptionsBtn');
 const closeContactOptionsModal = document.getElementById('closeContactOptionsModal');
 const contactOptionsModal = document.getElementById('contactOptionsModal');
+
 const consultationEmail = 'magadh.hind@gmail.com';
 
 const openModal = () => {
