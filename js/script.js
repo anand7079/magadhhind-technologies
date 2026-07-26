@@ -5,6 +5,11 @@ const consultModal = document.getElementById('consultModal');
 const consultationForm = document.getElementById('consultationForm');
 const consultationStatus = document.getElementById('consultationStatus');
 const submitConsultationBtn = document.getElementById('submitConsultationBtn');
+
+const openContactOptionsBtn = document.getElementById('openContactOptionsBtn');
+const closeContactOptionsModal = document.getElementById('closeContactOptionsModal');
+const contactOptionsModal = document.getElementById('contactOptionsModal');
+
 const consultationEmail = 'magadh.hind@gmail.com';
 
 const openModal = () => {
@@ -19,12 +24,29 @@ const closeModal = () => {
     consultModal.setAttribute('aria-hidden', 'true');
 };
 
+const openContactOptions = () => {
+    contactOptionsModal.classList.add('active');
+    contactOptionsModal.setAttribute('aria-hidden', 'false');
+};
+
+const closeContactOptions = () => {
+    contactOptionsModal.classList.remove('active');
+    contactOptionsModal.setAttribute('aria-hidden', 'true');
+};
+
 openConsultationBtn.addEventListener('click', openModal);
 closeConsultationModal.addEventListener('click', closeModal);
 cancelConsultationBtn.addEventListener('click', closeModal);
+openContactOptionsBtn.addEventListener('click', openContactOptions);
+closeContactOptionsModal.addEventListener('click', closeContactOptions);
 consultModal.addEventListener('click', (event) => {
     if (event.target === consultModal) {
         closeModal();
+    }
+});
+contactOptionsModal.addEventListener('click', (event) => {
+    if (event.target === contactOptionsModal) {
+        closeContactOptions();
     }
 });
 
